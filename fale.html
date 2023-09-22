@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Adicione isso ao seu arquivo style.css */
+        .btn-custom-green {
+            background-color: #4CAF50;
+            color: #fff;
+            border: 2px solid #4CAF50;
+        }
+
+        .container {
+            margin-top: 50px;
+            max-width: 500px;
+            padding: 20px;
+            border: 4px solid #4CAF50;
+            /* Aumente o tamanho da borda */
+            border-radius: 15px;
+            /* Aumente o tamanho do border radius */
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        body {
+            background-image: url('imagem/111.jpg');
+            /* Caminho para a imagem de fundo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        *{
+            color: white;
+            
+        }
+    </style>
+    <title>Fale Conosco</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+                <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5ZM9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8Zm1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5Zm-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96c.026-.163.04-.33.04-.5ZM7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
+            </svg> Fale Conosco</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" class="form-control" id="name" placeholder="Seu Nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Seu Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom-green">Enviar</button>
+        </form>
+    </div>
+    <script src="script.js">
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contact-form");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                // Coletar dados do formulário
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+
+                // Aqui você pode fazer algo com os dados, como enviá-los para um servidor ou mostrar uma mensagem de confirmação.
+                // Neste exemplo, apenas mostraremos um alerta.
+                alert(`Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`);
+
+                // Limpar os campos após o envio
+                form.reset();
+            });
+        });
+    </script>
+</body>
+
+</html>
