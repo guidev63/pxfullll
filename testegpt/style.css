@@ -1,0 +1,38 @@
+.loading_wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    z-index: 200;
+}
+
+.loader_text {
+    color: #fff;
+    font-family: "motserrat";
+    font-weight: 500;
+    margin-bottom: 1.4rem;
+}
+
+.loader {
+    position: relative;
+    width: 200px;
+    height: 2px;
+
+}
+
+span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: :rgb(255, 0, 0);
+    tranform: scalex(0);
+    tranform-origin: left
+}
