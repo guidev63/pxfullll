@@ -1,0 +1,138 @@
+/* Reset de margens e preenchimentos padrão */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para a div .centered que envolve os cards */
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centraliza verticalmente na tela */
+}
+
+/* Estilo para os cards */
+.card {
+    position: relative;
+    width: 300px; /* Largura do card */
+    height: 300px; /* Altura do card */
+    margin: 20px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Estilo para as imagens de fundo dos cards */
+.image.background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo para as imagens de recorte dos cards */
+.image.cutout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: screen; /* Modo de mesclagem para um efeito de recorte */
+}
+
+/* Estilo para a sombra nos cards */
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1; /* Coloca a sombra atrás do conteúdo */
+}
+
+/* Estilo para o conteúdo dos cards */
+.content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+}
+
+/* Estilo para o texto dos cards */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+}
+/* Estilo para as imagens de fundo dos cards */
+.image.background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Adicione rotação 3D quando o mouse passar por cima */
+.image.background:hover {
+    transform: perspective(1000px) rotateY(20deg);
+}
+
+/* Estilo para as imagens de recorte dos cards */
+.image.cutout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: screen; /* Modo de mesclagem para um efeito de recorte */
+}
+/* Estilo para as imagens de fundo dos cards */
+.image.background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Adicione rotação 3D quando o mouse passar por cima */
+.card:hover .image.background {
+    transform: perspective(1000px) rotateY(20deg);
+}
+/* Estilo para a imagem dentro do card */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Redimensiona a imagem para cobrir todo o espaço da div */
+}
+/* Estilo para as imagens de fundo dos cards */
+.image.background,
+.card img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Adicione rotação 3D quando o mouse passar por cima */
+.card:hover .image.background,
+.card:hover img {
+    transform: perspective(1000px) rotateY(20deg);
+}
+
+
