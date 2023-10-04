@@ -12,66 +12,87 @@
     <style>
         /* Adicione isso ao seu arquivo style.css */
         .btn-custom-green {
-            background-color: #4CAF50;
+            background-color:#035405;
             color: #fff;
-            border: 2px solid #4CAF50;
-            
+            border: 2px solid #035405;
+        }
+
+        body {
+            background-image: url('');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0; /* Remova a margem padrão do corpo */
+            height: 100vh; /* Defina a altura do corpo para cobrir a tela inteira */
+            display: flex;
+            justify-content: center; /* Centralize horizontalmente */
+            align-items: center; /* Centralize verticalmente */
+        }
+
+        * {
+            color: black;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            50% {
+                transform: translate3d(0, -20px, 0);
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .floating-container {
+            animation: floating 3s ease infinite;
+            /* Outros estilos da div... */
         }
 
         .container {
-            margin-top: 50px;
             max-width: 500px;
             padding: 20px;
-            border: 4px solid #4CAF50;
-            /* Aumente o tamanho da borda */
+            border: 4px solid #035405;
             border-radius: 15px;
-            /* Aumente o tamanho do border radius */
-            
         }
+
         form {
             margin-top: 20px;
         }
 
         h2 {
             text-align: center;
-        }
-
-        body {
-            background-image: url('imagem/111.jpg');
-            /* Caminho para a imagem de fundo */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;           
-        }
-        *{
-            color:black;              
+            justify-items: center;
         }
     </style>
     <title>Fale Conosco</title>
 </head>
 
 <body>
-    <div class="container">
-        <h2> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
-                <path
-                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5ZM9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8Zm1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5Zm-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96c.026-.163.04-.33.04-.5ZM7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
-            </svg> Fale Conosco</h2>
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" class="form-control" id="name" placeholder="Seu Nome" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Seu Email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Mensagem:</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Sua Mensagem" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-custom-green">Enviar</button>
-        </form>
+    <div class="floating-container">
+        <div class="container">
+            <h2> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5ZM9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8Zm1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5Zm-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96c.026-.163.04-.33.04-.5ZM7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
+                </svg> Fale Conosco</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Seu Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom-green">Enviar</button>
+            </form>
+        </div>
     </div>
     <script src="script.js">
         document.addEventListener("DOMContentLoaded", function () {
