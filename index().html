@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecionar para o WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #redirecionarBtn {
+            background-color: #25d366;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #redirecionarBtn:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clique no botão para redirecionar para o WhatsApp</h1>
+
+    <!-- Botão que redirecionará para o WhatsApp quando clicado -->
+    <button id="redirecionarBtn">Redirecionar para o WhatsApp</button>
+
+    <script>
+        // Adicione um ouvinte de evento para o botão
+        document.getElementById("redirecionarBtn").addEventListener("click", function () {
+            // Número de telefone para o qual você deseja redirecionar
+            var numeroWhatsApp = '1234567890';
+
+            // Crie uma URL de redirecionamento para o WhatsApp
+            var urlWhatsApp = 'https://api.whatsapp.com/send?phone=' + numeroWhatsApp;
+
+            // Redirecione para a URL do WhatsApp
+            window.location.href = urlWhatsApp;
+        });
+    </script>
+</body>
+</html>
